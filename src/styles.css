@@ -96,8 +96,6 @@ a { color: inherit; }
   padding-top: max(20px, env(safe-area-inset-top));
   padding-bottom: 20px;
 }
-.masthead__logo { display: block; width: 148px; }
-.masthead__logo img { width: 100%; }
 .masthead__meta {
   font-size: .6875rem;
   text-transform: uppercase;
@@ -105,7 +103,6 @@ a { color: inherit; }
 }
 @media (min-width: 960px) {
   .masthead { padding-top: 36px; padding-bottom: 36px; }
-  .masthead__logo { width: 184px; }
 }
 
 /* ---------- Shared labels ---------- */
@@ -145,80 +142,65 @@ a { color: inherit; }
 
 .hero {
   display: grid;
-  gap: 28px;
-  padding-top: 12px;
-  padding-bottom: 56px;
+  gap: 36px;
+  padding-top: 20px;
+  padding-bottom: 64px;
 }
+.hero__brand { width: min(78%, 300px); }
+.hero__brand img { width: 100%; }
 .hero__title {
-  margin-top: 18px;
-  font-size: clamp(2rem, 8.6vw, 4.25rem);
+  margin-top: 32px;
+  font-size: clamp(2.125rem, 9.6vw, 4rem);
   font-weight: 900;
-  line-height: 1.32;
+  line-height: 1.3;
   letter-spacing: .01em;
 }
 .hero__lead {
   margin-top: 20px;
-  max-width: 34em;
+  max-width: 30em;
   font-size: .9375rem;
   line-height: 1.95;
   color: var(--ink-soft);
 }
-
-.hero__figure { position: relative; }
-.hero__photo {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: #DCDAD6;
-  border-radius: 2px;
-}
-.hero__photo img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: 50% 18%;
-}
-
-.nameplate {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: baseline;
-  column-gap: 12px;
-  row-gap: 2px;
-  padding-top: 16px;
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: 14px;
-}
-.nameplate__ja {
-  font-size: 1.375rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-}
-.nameplate__en {
-  justify-self: end;
+.hero__en {
+  margin-top: 20px;
   font-family: var(--font-en);
-  font-weight: 600;
   font-size: .875rem;
+  font-weight: 500;
   letter-spacing: .01em;
+  color: var(--gold-text);
 }
-.nameplate__role {
-  grid-column: 1 / -1;
-  font-size: .8125rem;
-  color: var(--muted);
-}
+
+/* Static brand visual: a trail through small tools */
+.hero__visual svg { display: block; width: 100%; height: auto; }
+.v-frame { fill: var(--card); stroke: var(--rule); }
+.v-grid { fill: var(--rule); }
+.v-path { fill: none; stroke: var(--ink); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.v-path--ahead { stroke: var(--rule-strong); stroke-dasharray: 3 6; }
+.v-link { stroke: var(--rule-strong); stroke-width: 1.25; stroke-dasharray: 2 5; stroke-linecap: round; }
+.v-card { fill: var(--card); stroke: var(--ink); stroke-width: 1.25; }
+.v-ink { stroke: var(--rule-strong); stroke-width: 3; stroke-linecap: round; }
+.v-ink--bold { stroke: var(--ink); stroke-width: 4; }
+.v-box { fill: none; stroke: var(--ink-soft); stroke-width: 1.25; }
+.v-field { fill: var(--paper); stroke: var(--rule-strong); stroke-width: 1; }
+.v-button { fill: var(--ink); }
+.v-node { fill: var(--card); stroke: var(--ink); stroke-width: 1.75; }
+.v-gold { fill: var(--gold); }
+.v-halo { fill: none; stroke: var(--gold); stroke-width: 1; opacity: .55; }
+.v-label { font-family: var(--font-mono); font-size: 13px; letter-spacing: .08em; fill: var(--gold-text); }
 
 @media (min-width: 960px) {
   .hero {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
-    align-items: end;
-    gap: 64px;
-    padding-top: 40px;
-    padding-bottom: 112px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    align-items: center;
+    gap: 72px;
+    padding-top: 48px;
+    padding-bottom: 128px;
   }
-  .hero__title { margin-top: 28px; }
-  .hero__lead { margin-top: 32px; font-size: 1.0625rem; }
-  .hero__photo { aspect-ratio: 4 / 5; }
-  .hero__photo img { object-position: 50% 30%; }
-  .nameplate__ja { font-size: 1.5rem; }
+  .hero__brand { width: 400px; }
+  .hero__title { margin-top: 48px; }
+  .hero__lead { margin-top: 28px; font-size: 1.0625rem; }
+  .hero__en { margin-top: 28px; font-size: .9375rem; }
 }
 
 /* ---------- Statement ---------- */
@@ -393,9 +375,52 @@ a { color: inherit; }
   .approach__note { margin-top: 56px; }
 }
 
-/* ---------- Profile card ---------- */
+/* ---------- Profile ---------- */
 
 .profile { padding-top: 72px; padding-bottom: 88px; }
+.profile__body {
+  display: grid;
+  grid-template-columns: minmax(0, 38%) minmax(0, 1fr);
+  grid-template-areas: "photo head" "card card";
+  column-gap: 20px;
+  row-gap: 24px;
+  align-items: end;
+}
+.profile__photo {
+  grid-area: photo;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #DCDAD6;
+  border-radius: 2px;
+}
+.profile__photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+.profile__head { grid-area: head; padding-bottom: 4px; }
+.profile__name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .12em;
+}
+.profile__en {
+  margin-top: 2px;
+  font-family: var(--font-en);
+  font-weight: 600;
+  font-size: .875rem;
+  letter-spacing: .01em;
+}
+.profile__role {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--ink);
+  font-size: .8125rem;
+  color: var(--muted);
+}
+.profile .card { grid-area: card; }
+
 .card {
   background: var(--card);
   border: 1px solid var(--rule);
@@ -418,14 +443,6 @@ a { color: inherit; }
   color: var(--muted);
 }
 .card__row dd { font-size: .9375rem; line-height: 1.7; }
-.card__name { display: block; font-size: 1.125rem; font-weight: 700; letter-spacing: .12em; }
-.card__sub {
-  display: block;
-  font-family: var(--font-en);
-  font-weight: 500;
-  font-size: .875rem;
-  color: var(--ink-soft);
-}
 
 .interests { display: flex; flex-wrap: wrap; gap: 8px; }
 .interests li {
@@ -467,13 +484,19 @@ a { color: inherit; }
 .contact__copy:hover { background: var(--paper); border-color: var(--ink); }
 
 @media (min-width: 960px) {
-  .profile {
-    display: grid;
-    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
-    gap: 64px;
-    padding-top: 120px;
-    padding-bottom: 140px;
+  .profile { padding-top: 120px; padding-bottom: 140px; }
+  .profile__body {
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    grid-template-areas: "photo head" "photo card";
+    grid-template-rows: auto 1fr;
+    column-gap: 64px;
+    row-gap: 28px;
+    align-items: start;
   }
+  .profile__head { padding: 8px 0 0; }
+  .profile__name { font-size: 1.75rem; }
+  .profile__en { font-size: 1rem; }
+  .profile__role { font-size: .875rem; }
   .card { padding: 12px 36px; }
   .card__row { grid-template-columns: 8rem 1fr; padding-block: 20px; }
 }

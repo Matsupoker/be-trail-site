@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>松島 力也 — BE TRAIL</title>
-  <meta name="description" content="理学療法士・松島力也のWeb名刺。介護現場での実務経験を起点に、AIとコードで現場のための小さな業務アプリをつくる。BE TRAIL / Yamaguchi, Japan.">
+  <title>BE TRAIL — 現場から、使える仕組みを。</title>
+  <meta name="description" content="BE TRAILは、介護現場での実務経験を起点に、AIとコードで現場のための軽量なマイクロアプリをつくり、業務改善に取り組んでいます。運営：松島力也（理学療法士）/ Yamaguchi, Japan.">
   <meta name="theme-color" content="#F3F0E8">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="%SITE_URL%">
 
-  <meta property="og:type" content="profile">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="BE TRAIL">
-  <meta property="og:title" content="松島 力也 — BE TRAIL">
-  <meta property="og:description" content="現場を知る人間が、現場のためのAIをつくる。Field-Built AI. Small Tools, Real Work.">
+  <meta property="og:title" content="BE TRAIL — 現場から、使える仕組みを。">
+  <meta property="og:description" content="現場起点のマイクロアプリ開発と、AIを活用した業務改善。Field-Built AI. Small Tools, Real Work.">
   <meta property="og:url" content="%SITE_URL%">
   <meta property="og:image" content="%SITE_URL%og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
-  <link rel="preload" as="image" href="assets/rikiya-matsushima-720.webp" imagesrcset="assets/rikiya-matsushima-480.webp 480w, assets/rikiya-matsushima-720.webp 720w, assets/rikiya-matsushima-1000.webp 1000w" imagesizes="(min-width: 960px) 40vw, 100vw">
+  <link rel="preload" as="image" href="assets/be-trail-logo.webp" type="image/webp">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -35,12 +35,7 @@
   <a class="skip" href="#main">本文へ移動</a>
 
   <header class="masthead wrap">
-    <a class="masthead__logo" href="#top" aria-label="BE TRAIL トップへ">
-      <picture>
-        <source srcset="assets/be-trail-logo.webp" type="image/webp">
-        <img src="assets/be-trail-logo.png" width="1200" height="207" alt="BE TRAIL">
-      </picture>
-    </a>
+    <p class="eyebrow mono"><span class="eyebrow__dot" aria-hidden="true"></span>Field-Built AI</p>
     <p class="masthead__meta mono">Yamaguchi, JP</p>
   </header>
 
@@ -48,28 +43,74 @@
     <!-- Hero -->
     <section class="hero wrap" id="top" aria-labelledby="hero-title">
       <div class="hero__text">
-        <p class="eyebrow mono"><span class="eyebrow__dot" aria-hidden="true"></span>Field-Built AI</p>
-        <h1 class="hero__title" id="hero-title">
-          <span class="nb">現場を知る人間が、</span><span class="nb">現場のための</span><span class="nb">AIをつくる。</span>
+        <h1 class="hero__brand" id="hero-title">
+          <picture>
+            <source srcset="assets/be-trail-logo.webp" type="image/webp">
+            <img src="assets/be-trail-logo.png" width="1200" height="207" alt="BE TRAIL" fetchpriority="high">
+          </picture>
         </h1>
-        <p class="hero__lead">
-          <span class="nb">介護現場での実務経験を起点に、</span><span class="nb">日々の業務に潜む</span><span class="nb">小さな非効率を見つけ、</span><span class="nb">AIとコードで</span><span class="nb">軽量な業務アプリへ変えていく。</span>
+        <p class="hero__title">
+          <span class="nb">現場から、</span><span class="nb">使える仕組みを。</span>
         </p>
+        <p class="hero__lead">
+          <span class="nb">介護現場での実務経験を起点に、</span><span class="nb">AIとコードで、</span><span class="nb">日々の業務にある</span><span class="nb">小さな非効率を</span><span class="nb">軽量なマイクロアプリへ。</span>
+        </p>
+        <p class="hero__en" lang="en">Field-Built AI. Small Tools, Real Work.</p>
       </div>
 
-      <figure class="hero__figure">
-        <div class="hero__photo">
-          <picture>
-            <source type="image/webp" srcset="assets/rikiya-matsushima-480.webp 480w, assets/rikiya-matsushima-720.webp 720w, assets/rikiya-matsushima-1000.webp 1000w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="assets/rikiya-matsushima-720.jpg" width="720" height="900" alt="松島力也のプロフィール写真。ネイビーのジャケットに白いTシャツ、眼鏡をかけて穏やかに微笑んでいる。" fetchpriority="high">
-          </picture>
-        </div>
-        <figcaption class="nameplate">
-          <span class="nameplate__ja">松島 力也</span>
-          <span class="nameplate__en">Rikiya Matsushima</span>
-          <span class="nameplate__role">理学療法士<span class="sep" aria-hidden="true">/</span>BE TRAIL</span>
-        </figcaption>
-      </figure>
+      <div class="hero__visual" aria-hidden="true">
+        <svg viewBox="0 0 560 420" focusable="false">
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="10" cy="10" r="1" class="v-grid"/>
+            </pattern>
+          </defs>
+          <rect x="0.5" y="0.5" width="559" height="419" rx="4" class="v-frame"/>
+          <rect x="1" y="1" width="558" height="418" rx="4" fill="url(#grid)"/>
+
+          <!-- the trail: field → notice → build → run -->
+          <path class="v-path" d="M60 350 H180 Q200 350 200 330 V250 H340 Q360 250 360 230 V170 H480 Q500 170 500 150 V80"/>
+          <path class="v-path v-path--ahead" d="M500 72 V30"/>
+
+          <!-- micro app fragment: noticing -->
+          <line class="v-link" x1="200" y1="243" x2="200" y2="176"/>
+          <g transform="translate(126 84)">
+            <rect width="148" height="92" rx="3" class="v-card"/>
+            <line x1="14" y1="20" x2="70" y2="20" class="v-ink v-ink--bold"/>
+            <rect x="14" y="36" width="8" height="8" rx="1" class="v-box"/>
+            <line x1="30" y1="40" x2="112" y2="40" class="v-ink"/>
+            <rect x="14" y="54" width="8" height="8" rx="1" class="v-box"/>
+            <line x1="30" y1="58" x2="96" y2="58" class="v-ink"/>
+            <circle cx="126" cy="58" r="3.5" class="v-gold"/>
+            <rect x="14" y="72" width="8" height="8" rx="1" class="v-box"/>
+            <line x1="30" y1="76" x2="104" y2="76" class="v-ink"/>
+          </g>
+
+          <!-- micro app fragment: building -->
+          <line class="v-link" x1="420" y1="176" x2="420" y2="282"/>
+          <g transform="translate(302 282)">
+            <rect width="170" height="104" rx="3" class="v-card"/>
+            <line x1="14" y1="20" x2="64" y2="20" class="v-ink v-ink--bold"/>
+            <rect x="14" y="34" width="142" height="16" rx="2" class="v-field"/>
+            <rect x="14" y="56" width="142" height="16" rx="2" class="v-field"/>
+            <rect x="100" y="80" width="56" height="14" rx="7" class="v-button"/>
+          </g>
+
+          <!-- nodes -->
+          <circle cx="60" cy="350" r="6" class="v-node"/>
+          <circle cx="200" cy="250" r="6" class="v-node"/>
+          <circle cx="360" cy="170" r="6" class="v-node"/>
+          <circle cx="500" cy="80" r="13" class="v-halo"/>
+          <circle cx="500" cy="80" r="6.5" class="v-gold"/>
+
+          <g class="v-label">
+            <text x="60" y="384" text-anchor="middle">01</text>
+            <text x="216" y="276">02</text>
+            <text x="376" y="196">03</text>
+            <text x="524" y="85">04</text>
+          </g>
+        </svg>
+      </div>
     </section>
 
     <!-- Statement -->
@@ -121,7 +162,7 @@
       <div class="wrap">
         <div class="section-head reveal">
           <p class="section-label mono"><span>03</span>Field-Built Approach</p>
-          <h2 class="section-title" id="approach-title">現場から、使える仕組みを。</h2>
+          <h2 class="section-title" id="approach-title">現場から、道具が生まれるまで。</h2>
         </div>
         <ol class="trail">
           <li class="trail__step reveal">
@@ -159,44 +200,49 @@
         <p class="section-label mono"><span>04</span>Profile</p>
         <h2 class="section-title" id="profile-title">プロフィール</h2>
       </div>
-      <div class="card reveal">
-        <dl class="card__list">
-          <div class="card__row">
-            <dt class="mono">Name</dt>
-            <dd><span class="card__name">松島 力也</span><span class="card__sub" lang="en">Rikiya Matsushima</span></dd>
-          </div>
-          <div class="card__row">
-            <dt class="mono">Role</dt>
-            <dd>理学療法士<span class="sep" aria-hidden="true">/</span>BE TRAIL</dd>
-          </div>
-          <div class="card__row">
-            <dt class="mono">Base</dt>
-            <dd lang="en">Yamaguchi, Japan</dd>
-          </div>
-          <div class="card__row">
-            <dt class="mono">Focus</dt>
-            <dd><span class="nb">現場起点の</span><span class="nb">マイクロアプリ開発・</span><span class="nb">AI業務改善</span></dd>
-          </div>
-          <div class="card__row">
-            <dt class="mono">Off Duty</dt>
-            <dd>
-              <ul class="interests" lang="en">
-                <li>Poker</li>
-                <li>Sauna</li>
-                <li>Travel</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="card__row">
-            <dt class="mono">Contact</dt>
-            <dd class="contact">
-              <a class="contact__mail" href="mailto:bourei001@gmail.com">bourei001@gmail.com</a>
-              <button class="contact__copy mono" type="button" data-copy="bourei001@gmail.com" hidden>
-                <span class="contact__copy-label">Copy</span>
-              </button>
-            </dd>
-          </div>
-        </dl>
+      <div class="profile__body reveal">
+        <figure class="profile__photo">
+          <picture>
+            <source type="image/webp" srcset="assets/rikiya-matsushima-480.webp 480w, assets/rikiya-matsushima-720.webp 720w" sizes="(min-width: 960px) 320px, 38vw">
+            <img src="assets/rikiya-matsushima-720.jpg" width="720" height="900" alt="松島力也のプロフィール写真。ネイビーのジャケットに白いTシャツ、眼鏡をかけて穏やかに微笑んでいる。" loading="lazy">
+          </picture>
+        </figure>
+        <div class="profile__head">
+          <p class="profile__name">松島 力也</p>
+          <p class="profile__en" lang="en">Rikiya Matsushima</p>
+          <p class="profile__role">理学療法士<span class="sep" aria-hidden="true">/</span>BE TRAIL</p>
+        </div>
+        <div class="card">
+          <dl class="card__list">
+            <div class="card__row">
+              <dt class="mono">Base</dt>
+              <dd lang="en">Yamaguchi, Japan</dd>
+            </div>
+            <div class="card__row">
+              <dt class="mono">Focus</dt>
+              <dd><span class="nb">現場起点の</span><span class="nb">マイクロアプリ開発・</span><span class="nb">AI業務改善</span></dd>
+            </div>
+            <div class="card__row">
+              <dt class="mono">Off Duty</dt>
+              <dd>
+                <ul class="interests" lang="en">
+                  <li>Poker</li>
+                  <li>Sauna</li>
+                  <li>Travel</li>
+                </ul>
+              </dd>
+            </div>
+            <div class="card__row">
+              <dt class="mono">Contact</dt>
+              <dd class="contact">
+                <a class="contact__mail" href="mailto:bourei001@gmail.com">bourei001@gmail.com</a>
+                <button class="contact__copy mono" type="button" data-copy="bourei001@gmail.com" hidden>
+                  <span class="contact__copy-label">Copy</span>
+                </button>
+              </dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </section>
   </main>
