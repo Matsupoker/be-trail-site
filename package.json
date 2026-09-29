@@ -1,0 +1,13 @@
+{
+  "name": "be-trail-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "BE TRAIL web card — static one-page site for GitHub Pages.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "preview": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
